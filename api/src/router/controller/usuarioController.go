@@ -6,11 +6,11 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Criando Usuárioio!"))
 }
 
-func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
+func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Buscando todos Usuárioio!"))
 }
 
-func BuscarUsauarios(w http.ResponseWriter, r *http.Request) {
+func BuscarUsauario(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Buscando Usuárioio por ID!"))
 }
 
