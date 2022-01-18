@@ -10,11 +10,11 @@ import (
 
 func main() {
 	config.Carregar()
-	//fmt.Println(config.Porta)
-	//fmt.Println(config.StringConexaoBanco)
+	fmt.Println(config.Porta)
+	fmt.Println(config.StringConexaoBanco)
 
 	fmt.Println("Rodando api devbook!")
 	r := router.Gerar()
 
-	log.Fatal(http.ListenAndServe(fmt.Sprint(":%d", config.Porta), r))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
 }

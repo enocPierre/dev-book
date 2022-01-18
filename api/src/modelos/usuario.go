@@ -10,4 +10,3 @@ type Usuárioio struct {
 	Senha string `json:"senha,omitempty"`
 	CriadoEm time.Time `json:"criadoEm,omitempty"`
 }
-
