@@ -6,16 +6,16 @@ import (
 )
 
 // usuarios representa um repositorio de usuarios
-type Usuárioios struct {
+type Usuario struct {
 	db *sql.DB
 }
 
 //novoRepositorioDeUsuarios cria um repositorio de usaurio
-func NovoRepositoriosDeUsuarios(db *sql.DB) *Usuárioios {
-	return &Usuárioios{db}
+func NovoRepositoriosDeUsuarios(db *sql.DB) *Usuario {
+	return &Usuario{db}
 }
 
-func (repositorio Usuárioios) Criar(usuario modelos.Usuárioio) (uint64, error) {
+func (repositorio Usuario) Criar(usuario modelos.Usuario) (uint64, error) {
 	statement, erro := repositorio.db.Prepare(
 		"insert into usuarios (nome, nick, email, senha) values(?, ?, ?, ?)",
 	)
